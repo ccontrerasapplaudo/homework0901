@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="allSuites" parallel="false">
+    <suite-files>
+        <suite-file path="homework0501.xml" />
+        <suite-file path="homework0502.xml" />
+        <suite-file path="homework0601.xml" />
+        <suite-file path="homework0702RA.xml" />
+    </suite-files>
+</suite>
+

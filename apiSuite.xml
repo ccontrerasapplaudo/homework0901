@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<suite name="API SUITE" parallel="false">
-    <test name="API TEST" preserve-order="true">
-        <classes>
-            <!--            <class name="com.example.jenkinstestconfig.FirstSeleniumJavaTest"/>-->
-        </classes>
-    </test>
-</suite>

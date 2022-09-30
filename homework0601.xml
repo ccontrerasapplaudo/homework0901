@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Homework 0601 Suite" parallel="false">
+    <test name="Homework 0601 Test" preserve-order="true">
+        <groups>
+            <run>
+                <include name="homePageGroup" />
+                <include name="digitalCollectionsGroup" />
+                <include name="SurveyGroup" />
+            </run>
+        </groups>
+        <dependencies>
+            <group name="digitalCollectionsGroup" depends-on="homePageGroup"/>
+        </dependencies>
+        <classes>
+            <class name="com.applaudostudios.homework0901.homework0601.pages.HomePageTest"/>
+            <class name="com.applaudostudios.homework0901.homework0601.pages.DigitalCollectionsPageTest"/>
+            <class name="com.applaudostudios.homework0901.homework0601.pages.SurveyPageTest"/>
+        </classes>
+    </test>
+</suite>
