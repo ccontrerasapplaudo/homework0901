@@ -16,8 +16,7 @@ public class BaseTest {
     public static WebDriver driver;
     String browser = System.getProperty("browser");
 
-//    @BeforeTest(alwaysRun = true)
-    @BeforeTest
+    @BeforeTest(alwaysRun = true)
     public void setUp(){
 
         if(browser == "" || browser == null){
