@@ -1,7 +1,7 @@
 package com.applaudostudios.homework0901.homework0601.pages;
 
 
-import com.applaudostudios.homework0901.homework0601.BaseTest;
+import com.applaudostudios.homework0901.BaseTest;
 import com.applaudostudios.homework0901.homework0601.retries.HomePageRetry;
 import homework0601.HomePage;
 import org.testng.annotations.BeforeClass;
@@ -29,7 +29,7 @@ public class HomePageTest extends BaseTest {
     @Test(priority = 2,groups = "homePageGroup",retryAnalyzer = HomePageRetry.class)
     public void analyzeWithIRetry() throws InterruptedException {
         System.out.println("Executing Test 2 of HomePage\n");
-        homePage.testTwoHomePage("5/5",counter);
+        homePage.testTwoHomePage("4/4",counter);
         counter++;
         waitTime();
         System.out.println("Finishing Test 2 of HomePage\n");

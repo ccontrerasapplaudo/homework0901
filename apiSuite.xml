@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="API Suite" parallel="false">
+
+    <test name="Homework 0702 Rest Assured Test" preserve-order="true">
+        <classes>
+            <class name="com.applaudostudios.homework0901.homework0702RestAssured.RestAssuredTests"></class>
+        </classes>
+    </test>
+
+</suite>

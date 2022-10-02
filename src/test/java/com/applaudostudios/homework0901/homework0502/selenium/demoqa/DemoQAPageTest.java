@@ -1,6 +1,6 @@
 package com.applaudostudios.homework0901.homework0502.selenium.demoqa;
 
-import com.applaudostudios.homework0901.homework0502.selenium.BaseTest;
+import com.applaudostudios.homework0901.BaseTest;
 import homework0502.demoqa.DemoQAFormsPage;
 import homework0502.demoqa.DemoQAPage;
 import org.testng.annotations.Test;
@@ -75,7 +75,7 @@ public class DemoQAPageTest extends BaseTest {
         softAssert.assertEquals(popUpTableData.get(1), formData.get(2),"The email is incorrect");
         softAssert.assertEquals(popUpTableData.get(2),"Male","The gender is incorrect");
         softAssert.assertEquals(popUpTableData.get(3), formData.get(3),"The number is incorrect");
-        softAssert.assertEquals(popUpTableData.get(4), "12 September,2022","The date is incorrect");
+        softAssert.assertEquals(popUpTableData.get(4), "12 October,2022","The date is incorrect");
         softAssert.assertEquals(popUpTableData.get(5), formData.get(5),"The subject is incorrect");
         softAssert.assertEquals(popUpTableData.get(6), "Sports","The hobbie is incorrect");
         softAssert.assertEquals(popUpTableData.get(7),"Selenium_logo.png","The file is incorrect");

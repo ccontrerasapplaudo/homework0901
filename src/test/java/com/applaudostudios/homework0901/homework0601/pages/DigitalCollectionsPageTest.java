@@ -1,6 +1,6 @@
 package com.applaudostudios.homework0901.homework0601.pages;
 
-import com.applaudostudios.homework0901.homework0601.BaseTest;
+import com.applaudostudios.homework0901.BaseTest;
 import com.applaudostudios.homework0901.homework0601.listeners.DigitalCollectionsPageListener;
 import homework0601.DigitalCollectionsPage;
 import org.testng.annotations.BeforeClass;

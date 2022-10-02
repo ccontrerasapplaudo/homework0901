@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="UI Suite" parallel="false">
+
+    <test name="Homework 0501 Test" preserve-order="true">
+        <classes>
+            <class name="com.applaudostudios.homework0901.homework0501.automationPracticeTest.AutomationPracticeTest"></class>
+        </classes>
+    </test>
+
+    <test name="Homework 0502 Test" preserve-order="true">
+        <classes>
+            <class name="com.applaudostudios.homework0901.homework0502.selenium.demoqa.DemoQAPageTest"></class>
+        </classes>
+    </test>
+
+    <test name="Homework 0601 Test" preserve-order="true">
+        <groups>
+            <run>
+                <include name="homePageGroup" />
+                <include name="digitalCollectionsGroup" />
+                <include name="SurveyGroup" />
+            </run>
+        </groups>
+        <dependencies>
+            <group name="digitalCollectionsGroup" depends-on="homePageGroup"/>
+        </dependencies>
+        <classes>
+            <class name="com.applaudostudios.homework0901.homework0601.pages.HomePageTest"/>
+            <class name="com.applaudostudios.homework0901.homework0601.pages.DigitalCollectionsPageTest"/>
+            <class name="com.applaudostudios.homework0901.homework0601.pages.SurveyPageTest"/>
+        </classes>
+    </test>
+
+</suite>

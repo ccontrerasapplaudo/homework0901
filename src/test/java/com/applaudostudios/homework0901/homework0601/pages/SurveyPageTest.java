@@ -1,6 +1,6 @@
 package com.applaudostudios.homework0901.homework0601.pages;
 
-import com.applaudostudios.homework0901.homework0601.BaseTest;
+import com.applaudostudios.homework0901.BaseTest;
 import homework0601.SurveyPage;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
