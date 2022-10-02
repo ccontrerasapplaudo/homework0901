@@ -1,0 +1,25 @@
+1664739681871	geckodriver	INFO	Listening on 127.0.0.1:53922
+1664739682347	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "57137" "--remote-allow-hosts" "localhost" "--remote-allow-origins" "http://localhost:57137/" "-no-remote" "-profile" "C:\\Users\\carlo\\AppData\\Local\\Temp\\rust_mozprofile6oBM0C"
+1664739682672	Marionette	INFO	Marionette enabled
+1664739682677	Marionette	INFO	Listening on port 55211
+WebDriver BiDi listening on ws://localhost:57137
+Read port: 55211
+1664739682778	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\carlo\\AppData\\Local\\Temp\\rust_mozprofile6oBM0C\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:57137/devtools/browser/5836ac64-6c63-4eb1-99a9-824e8d4cfdca
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.loc.gov."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.loc.gov."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.loc.gov."
+1664739726404	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1664739728678	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.research.net."
+1664739732971	Marionette	INFO	Stopped listening on port 55211
