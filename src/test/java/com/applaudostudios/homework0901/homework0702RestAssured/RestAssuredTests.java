@@ -15,6 +15,7 @@ import static io.restassured.RestAssured.*;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.sql.SQLOutput;
 import java.util.Map;
 
 public class RestAssuredTests {
@@ -24,6 +25,7 @@ public class RestAssuredTests {
 
     @Test(priority = 1)
     public void getRoom() {
+        System.out.println("TEST 1 OBTAINING 1 ROOM");
         String id = "1";
         given()
                 .baseUri("https://automationintesting.online").
@@ -46,22 +48,26 @@ public class RestAssuredTests {
                 then()
                 .statusCode(200)
                 .extract().cookies();
+        System.out.println("TEST 2 OBTAINING TOKEN");
         System.out.println("Token value: " + cookies.get("token"));
         token = cookies.get("token");
     }
 
     @Test(priority = 3)
     public void getRoom1N() {
+        System.out.println("TEST 3 OBTAINING ALL ROOMS");
         getAllRooms();
     }
 
     @Test(priority = 4)
     public void getRoomIDTest() {
+        System.out.println("TEST 4 OBTAINING ROOMID");
         getRoomID();
     }
 
     @Test(priority = 5)
     public void postBooking1Room() throws IOException, ParseException {
+        System.out.println("TEST 5 CREATING BOOKING FOR ROOM WITH ID: "+roomID);
         FileReader reader = new FileReader("src/test/resources/booking1Room.json");
         JSONParser jsonParser = new JSONParser();
         JSONObject jsonObject = (JSONObject) jsonParser.parse(reader);
@@ -81,17 +87,24 @@ public class RestAssuredTests {
 
     @Test(priority = 6)
     public void getRoom1NSecondCall() {
+        System.out.println("TEST 6 OBTAINING ALL ROOMS");
         getAllRooms();
     }
 
     @Test(priority = 7)
     public void getRoomIDTestSecondCall() {
+        System.out.println("TEST 7 OBTAINING ROOMID");
         getRoomID();
     }
 
     @Parameters({"firstname","lastname","checkin","checkout"})
     @Test(priority = 8)
     public void postBooking1RoomWithParameters(String firstname, String lastname, String checkin, String checkout) throws IOException, ParseException {
+        System.out.println("TEST 8 BOOKING ROOM WITH ID: "+roomID+" WITH PARAMETERS:");
+        System.out.println(firstname);
+        System.out.println(lastname);
+        System.out.println(checkin);
+        System.out.println(checkout);
         FileReader reader = new FileReader("src/test/resources/booking1Room.json");
         JSONParser jsonParser = new JSONParser();
         JSONObject jsonObject = (JSONObject) jsonParser.parse(reader);
