@@ -3,8 +3,8 @@
 <suite name="API Suite" parallel="none">
     <parameter name="firstname" value="Nombre de prueba"/>
     <parameter name="lastname" value="Apellido de prueba"/>
-    <parameter name="checkin" value="2022-11-14T09:48:25.469Z"/>
-    <parameter name="checkout" value="2022-11-15T09:48:25.469Z"/>
+    <parameter name="checkin" value="2022-11-16T09:48:25.469Z"/>
+    <parameter name="checkout" value="2022-11-17T09:48:25.469Z"/>
     <test name="Homework 0702 Rest Assured Test" preserve-order="true">
         <classes>
             <class name="com.applaudostudios.homework0901.homework0702RestAssured.RestAssuredTests"></class>
