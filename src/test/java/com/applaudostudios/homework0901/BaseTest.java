@@ -3,6 +3,8 @@ package com.applaudostudios.homework0901;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
@@ -15,27 +17,38 @@ public class BaseTest {
 
     public static WebDriver driver;
     String browser = System.getProperty("browser");
+    ChromeOptions chromeOptions;
+    EdgeOptions edgeOptions;
 
     @BeforeTest(alwaysRun = true)
     public void setUp(){
 
+        chromeOptions = new ChromeOptions();
+        chromeOptions.addArguments("--log-level=3");
+        chromeOptions.addArguments("--silent");
+
+        edgeOptions = new EdgeOptions();
+        edgeOptions.addArguments("--log-level=3");
+        edgeOptions.addArguments("--silent");
+
         if(browser == "" || browser == null){
-            browser = "firefox";
+            browser = "chrome";
         }
 
         switch(browser) {
             case "edge":
-                driver = WebDriverManager.edgedriver().create();
+                driver = WebDriverManager.edgedriver().capabilities(edgeOptions).create();
                 break;
             case "firefox":
                 System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE,"null");
                 driver = WebDriverManager.firefoxdriver().create();
                 break;
             case "chrome":
-                driver = WebDriverManager.chromedriver().create();
+                driver = WebDriverManager.chromedriver().capabilities(chromeOptions).create();
                 break;
             default:
-                driver = WebDriverManager.chromedriver().create();
+                driver = WebDriverManager.chromedriver().capabilities(chromeOptions).create();
+
         }
         driver.manage().window().maximize();
     }

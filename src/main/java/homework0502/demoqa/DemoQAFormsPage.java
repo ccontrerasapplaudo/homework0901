@@ -42,6 +42,8 @@ public class DemoQAFormsPage {
     }
     public void clickOnPracticeFormButton(){
         driver.findElement(practiceFormButton).click();
+        JavascriptExecutor executor = (JavascriptExecutor) driver;
+        executor.executeScript("return document.getElementById('fixedban').remove();");
     }
 
     public void sendFormData(){
@@ -76,15 +78,15 @@ public class DemoQAFormsPage {
         driver.findElement(uploadPicture).sendKeys("C:\\Users\\carlo\\Desktop\\Selenium Jar and Drivers\\Selenium_logo.png");
     }
 
-    public void selectDropdownOptions(){
+    public void selectDropdownOptions() throws InterruptedException {
         driver.findElement(state).click();
+        waitTime();
         driver.findElement(stateSelected).click();
-
+        waitTime();
         driver.findElement(city).click();
-        JavascriptExecutor executor = (JavascriptExecutor)driver;
-        executor.executeScript("arguments[0].click();", driver.findElement(city));
-        executor.executeScript("arguments[0].click();", driver.findElement(selectedCity));
-
+        waitTime();
+        driver.findElement(selectedCity).click();
+        waitTime();
     }
 
     public void clickSubmitButton(){

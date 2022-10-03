@@ -69,18 +69,18 @@ public class DemoQAPageTest extends BaseTest {
         demoQAFormsPage.clickSubmitButton();
         waitTime();
 
-//        System.out.println("Verifying PopUp Table Info");
-//        List<String> popUpTableData=demoQAFormsPage.obtainTableData();
-//        softAssert.assertEquals(popUpTableData.get(0), formData.get(0)+" "+formData.get(1),"The name is incorrect");
-//        softAssert.assertEquals(popUpTableData.get(1), formData.get(2),"The email is incorrect");
-//        softAssert.assertEquals(popUpTableData.get(2),"Male","The gender is incorrect");
-//        softAssert.assertEquals(popUpTableData.get(3), formData.get(3),"The number is incorrect");
-//        softAssert.assertEquals(popUpTableData.get(4), "12 October,2022","The date is incorrect");
-//        softAssert.assertEquals(popUpTableData.get(5), formData.get(5),"The subject is incorrect");
-//        softAssert.assertEquals(popUpTableData.get(6), "Sports","The hobbie is incorrect");
-//        softAssert.assertEquals(popUpTableData.get(7),"Selenium_logo.png","The file is incorrect");
-//        softAssert.assertEquals(popUpTableData.get(8),formData.get(7),"The address is incorrect");
-//        softAssert.assertEquals(popUpTableData.get(9),formData.get(8)+" "+formData.get(9),"The state and city are incorrect");
+        System.out.println("Verifying PopUp Table Info");
+        List<String> popUpTableData=demoQAFormsPage.obtainTableData();
+        softAssert.assertEquals(popUpTableData.get(0), formData.get(0)+" "+formData.get(1),"The name is incorrect");
+        softAssert.assertEquals(popUpTableData.get(1), formData.get(2),"The email is incorrect");
+        softAssert.assertEquals(popUpTableData.get(2),"Male","The gender is incorrect");
+        softAssert.assertEquals(popUpTableData.get(3), formData.get(3),"The number is incorrect");
+        softAssert.assertEquals(popUpTableData.get(4), "12 October,2022","The date is incorrect");
+        softAssert.assertEquals(popUpTableData.get(5), formData.get(5),"The subject is incorrect");
+        softAssert.assertEquals(popUpTableData.get(6), "Sports","The hobbie is incorrect");
+        softAssert.assertEquals(popUpTableData.get(7),"Selenium_logo.png","The file is incorrect");
+        softAssert.assertEquals(popUpTableData.get(8),formData.get(7),"The address is incorrect");
+        softAssert.assertEquals(popUpTableData.get(9),formData.get(8)+" "+formData.get(9),"The state and city are incorrect");
 
         waitTime();
 

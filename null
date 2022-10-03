@@ -1,45 +1,19 @@
-1664745034102	geckodriver	INFO	Listening on 127.0.0.1:52376
-1664745034610	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50696" "--remote-allow-hosts" "localhost" "--remote-allow-origins" "http://localhost:50696/" "-no-remote" "-profile" "C:\\Users\\carlo\\AppData\\Local\\Temp\\rust_mozprofilePzokuT"
-1664745034906	Marionette	INFO	Marionette enabled
-1664745034910	Marionette	INFO	Listening on port 57299
-WebDriver BiDi listening on ws://localhost:50696
-Read port: 57299
-1664745035004	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\carlo\\AppData\\Local\\Temp\\rust_mozprofilePzokuT\\search.json.mozlz4", (void 0)))
-DevTools listening on ws://localhost:50696/devtools/browser/5e0f6981-d92c-442f-b537-2df69dd53fd5
-JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
-console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.loc.gov."
-console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.loc.gov."
-1664745062279	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
-TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
-TimedPromise@chrome://remote/content/marionette/sync.js:221:10
-interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
-webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
-console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.loc.gov."
-1664745067095	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
-TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
-TimedPromise@chrome://remote/content/marionette/sync.js:221:10
-interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
-webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
-1664745071987	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
-TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
-TimedPromise@chrome://remote/content/marionette/sync.js:221:10
-interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
-webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
-1664745076839	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
-TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
-TimedPromise@chrome://remote/content/marionette/sync.js:221:10
-interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
-webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
-1664745079124	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
-TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
-TimedPromise@chrome://remote/content/marionette/sync.js:221:10
-interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
-webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
-1664745081394	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
-TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
-TimedPromise@chrome://remote/content/marionette/sync.js:221:10
-interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
-webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
-console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.research.net."
-1664745085719	Marionette	INFO	Stopped listening on port 57299
+1664765695432	geckodriver	INFO	Listening on 127.0.0.1:49443
+1664765696788	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "55295" "--remote-allow-hosts" "localhost" "--remote-allow-origins" "http://localhost:55295/" "-no-remote" "-profile" "C:\\Users\\carlo\\AppData\\Local\\Temp\\rust_mozprofileJUKuh2"
+1664765697087	Marionette	INFO	Marionette enabled
+1664765697091	Marionette	INFO	Listening on port 49205
+Read port: 49205
+WebDriver BiDi listening on ws://127.0.0.1:55295
+1664765697180	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\carlo\\AppData\\Local\\Temp\\rust_mozprofileJUKuh2\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:55295/devtools/browser/050eb2f7-1c9e-47c6-a905-5d530c692e40
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 307: NS_ERROR_FAILURE: Should pass a non-null uri
+JavaScript warning: https://pagead2.googlesyndication.com/bg/-Y38d37a1DmvdXzRnIUkD6jTpQ2urOaWudC6FG_jR1g.js line 2 > eval line 3296 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/-Y38d37a1DmvdXzRnIUkD6jTpQ2urOaWudC6FG_jR1g.js line 2 > eval line 5029 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: https://cdn.ad.plus/player/adplus.js, line 402: TypeError: e(...).setup is not a function
+JavaScript warning: https://pagead2.googlesyndication.com/bg/-Y38d37a1DmvdXzRnIUkD6jTpQ2urOaWudC6FG_jR1g.js line 2 > eval line 2241 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: uncaught exception: 7
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1664765744032	Marionette	INFO	Stopped listening on port 49205
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 719: Error: Phase "Sqlite.jsm: wait until all connections are closed" is finished, it is too late to register completion condition "protections.sqlite#0: waiting for shutdown"
