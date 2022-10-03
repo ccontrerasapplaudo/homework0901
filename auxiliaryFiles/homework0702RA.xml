@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="Homework 0702 Rest Assured Suite" parallel="none">
+    <parameter name="firstname" value="Nombre de prueba"/>
+    <parameter name="lastname" value="Apellido de prueba"/>
+    <parameter name="checkin" value="2022-11-10T09:48:25.469Z"/>
+    <parameter name="checkout" value="2022-11-11T09:48:25.469Z"/>
     <test name="Homework 0702 Rest Assured Test" preserve-order="true">
         <classes>
             <class name="com.applaudostudios.homework0901.homework0702RestAssured.RestAssuredTests"></class>

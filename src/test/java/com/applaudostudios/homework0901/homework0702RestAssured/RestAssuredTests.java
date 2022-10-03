@@ -1,17 +1,21 @@
 package com.applaudostudios.homework0901.homework0702RestAssured;
 
-
 import io.restassured.http.ContentType;
 import io.restassured.http.Cookie;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import java.io.File;
-import java.util.Map;
-
 import static io.restassured.RestAssured.*;
-import static io.restassured.RestAssured.given;
+
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Map;
 
 public class RestAssuredTests {
 
@@ -32,7 +36,7 @@ public class RestAssuredTests {
 
     @Test(priority = 2)
     public void postRetrieveToken() {
-        File file = new File("resources/step01/authCredentials.json");
+        File file = new File("src/test/resources/authCredentials.json");
         Map<String, String> cookies = given()
                 .baseUri("https://automationintesting.online")
                 .contentType(ContentType.JSON)
@@ -48,6 +52,69 @@ public class RestAssuredTests {
 
     @Test(priority = 3)
     public void getRoom1N() {
+        getAllRooms();
+    }
+
+    @Test(priority = 4)
+    public void getRoomIDTest() {
+        getRoomID();
+    }
+
+    @Test(priority = 5)
+    public void postBooking1Room() throws IOException, ParseException {
+        FileReader reader = new FileReader("src/test/resources/booking1Room.json");
+        JSONParser jsonParser = new JSONParser();
+        JSONObject jsonObject = (JSONObject) jsonParser.parse(reader);
+        jsonObject.put("roomid", roomID);
+        Cookie cookie = new Cookie.Builder("token", token).setSecured(true).setComment("Booking 1 room cookie").build();
+        given()
+                .baseUri("https://automationintesting.online")
+                .cookie(cookie)
+                .contentType(ContentType.JSON).
+                body(jsonObject.toString()).
+                when()
+                .post("/booking/").
+                then()
+                .statusCode(201).
+                log().all();
+    }
+
+    @Test(priority = 6)
+    public void getRoom1NSecondCall() {
+        getAllRooms();
+    }
+
+    @Test(priority = 7)
+    public void getRoomIDTestSecondCall() {
+        getRoomID();
+    }
+
+    @Parameters({"firstname","lastname","checkin","checkout"})
+    @Test(priority = 8)
+    public void postBooking1RoomWithParameters(String firstname, String lastname, String checkin, String checkout) throws IOException, ParseException {
+        FileReader reader = new FileReader("src/test/resources/booking1Room.json");
+        JSONParser jsonParser = new JSONParser();
+        JSONObject jsonObject = (JSONObject) jsonParser.parse(reader);
+        jsonObject.put("roomid", roomID);
+        jsonObject.put("firstname", firstname);
+        jsonObject.put("lastname", lastname);
+        JSONObject checking = (JSONObject) jsonObject.get("bookingdates");
+        checking.put("checkin", checkin);
+        checking.put("checkout", checkout);
+        Cookie cookie = new Cookie.Builder("token", token).setSecured(true).setComment("Booking 1 room cookie").build();
+        given()
+                .baseUri("https://automationintesting.online")
+                .cookie(cookie)
+                .contentType(ContentType.JSON).
+                body(jsonObject.toString()).
+                when()
+                .post("/booking/").
+                then()
+                .statusCode(201).
+                log().all();
+    }
+
+    public void getAllRooms(){
         given()
                 .baseUri("https://automationintesting.online").
                 when()
@@ -56,9 +123,7 @@ public class RestAssuredTests {
                 .log().body();
     }
 
-    @Test(priority = 4)
-    public void getRoomID() {
-
+    public void getRoomID(){
         Response response = given()
                 .baseUri("https://automationintesting.online").
                 when()
@@ -74,22 +139,6 @@ public class RestAssuredTests {
         String path = "rooms"+"["+index+"]"+".roomid";
         System.out.println("Selected ID to perform booking "+jsonPath.getString(path));
         roomID = jsonPath.getString(path);
-    }
-
-    @Test(priority = 5)
-    public void postBooking1Room() {
-        File file = new File("resources/step01/booking1Room.json");
-        Cookie cookie = new Cookie.Builder("token", token).setSecured(true).setComment("Booking 1 room cookie").build();
-        given()
-                .baseUri("https://automationintesting.online")
-                .cookie(cookie)
-                .contentType(ContentType.JSON).
-                body(file).
-                when()
-                .post("/booking/").
-                then()
-                .statusCode(201).
-                log().all();
     }
 
 }
